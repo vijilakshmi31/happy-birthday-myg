@@ -1,0 +1,148 @@
+body {
+  background-color: #ffe6f0;
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  padding-top: 40px;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #ff1493;
+  font-weight: bold;
+}
+
+#cakeGif {
+  display: none;
+  margin: 20px auto;
+  border-radius: 10px;
+  width: 300px;
+}
+
+.slider {
+  width: 90%;
+  max-width: 800px;
+  margin: 40px auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.slides {
+  display: flex;
+  width: 1000%;
+  animation: slide 40s linear infinite;
+}
+
+.slides img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+@keyframes slide {
+  0%   { transform: translateX(0%); }
+  10%  { transform: translateX(-100%); }
+  20%  { transform: translateX(-200%); }
+  30%  { transform: translateX(-300%); }
+  40%  { transform: translateX(-400%); }
+  50%  { transform: translateX(-500%); }
+  60%  { transform: translateX(-600%); }
+  70%  { transform: translateX(-700%); }
+  80%  { transform: translateX(-800%); }
+  90%  { transform: translateX(-900%); }
+  100% { transform: translateX(0%); }
+}
+
+#footerMsg {
+  font-size: 24px;
+  color: green;
+  margin-top: 30px;
+}
+
+#birthdayMsg {
+  display: none;
+  font-size: 36px;
+  color: #ff007f;
+  font-weight: bold;
+  margin-top: 30px;
+  animation: popUp 1s ease-out;
+}
+
+@keyframes popUp {
+  0% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.fireworks, .glitters, .hearts {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.firework {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: red;
+  border-radius: 50%;
+  animation: explode 1s ease-out forwards;
+}
+
+@keyframes explode {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(10); opacity: 0; }
+}
+
+.glitter {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: gold;
+  border-radius: 50%;
+  animation: sparkle 3s linear infinite;
+}
+
+@keyframes sparkle {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(100vh); opacity: 0; }
+}
+
+.heart {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: pink;
+  transform: rotate(45deg);
+  animation: float 5s linear infinite;
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: pink;
+  border-radius: 50%;
+}
+
+.heart::before {
+  top: -10px;
+  left: 0;
+}
+
+.heart::after {
+  left: -10px;
+  top: 0;
+}
+
+@keyframes float {
+  0% { transform: translateY(0) rotate(45deg); opacity: 1; }
+  100% { transform: translateY(-100vh) rotate(45deg); opacity: 0; }
+}

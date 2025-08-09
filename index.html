@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday Viji 🎂</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h1>🌟 Your Special Day 🌟</h1>
+  <h3 id="countdownText">Tap below to start the countdown!</h3>
+  <button class="btn btn-primary mb-3" onclick="startCountdown()">Start Countdown 🎊</button>
+
+  <div id="countdownTimer" style="display:none;">
+    <h2 id="timerDisplay"></h2>
+  </div>
+
+  <div id="celebration" style="display:none;">
+    <h2 class="text-danger fw-bold">🎂 It's time to celebrate! 🎂</h2>
+    <button class="btn btn-warning" onclick="cutCake()">Cut the Cake 🍰</button>
+    <br><br>
+    <img id="cakeGif" src="https://media.giphy.com/media/FPa3WqwV4WlCu8N7Yf/giphy.gif" alt="Cake Cutting GIF" />
+  </div>
+
+  <div id="footerMsg">🎈 Happy Birthday Viji 🎈</div>
+  <div id="birthdayMsg">❤️ Happy Birthday Viji! You are my everything ❤️</div>
+
+  <div class="fireworks" id="fireworksContainer"></div>
+  <div class="glitters" id="glitterContainer"></div>
+  <div class="hearts" id="heartContainer"></div>
+
+  <audio id="bgMusic" loop>
+    <source src="birthday.mp4" type="audio/mp4">
+    Your browser does not support the audio element.
+  </audio>
+
+  <div class="slider">
+    <div class="slides">
+      <img src="img1.jpg" />
+      <img src="img2.jpg" />
+      <img src="img3.jpg" />
+      <img src="img4.jpg" />
+      <img src="img5.jpg" />
+      <img src="img6.jpg" />
+      <img src="img7.jpg" />
+      <img src="img8.jpg" />
+      <img src="img9.jpg" />
+      <img src="img10.jpg" />
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
